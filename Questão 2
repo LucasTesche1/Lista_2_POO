@@ -1,0 +1,121 @@
+package questao2;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+				Scanner sc = new Scanner(System.in);
+				
+				 System.out.printf("Digite a senha: ");
+			        String senha = sc.nextLine();
+
+			        while (!senha.equals("123")) {
+			            System.out.printf("\nERRO DE SENHA, tente novamente\nDigite a senha: ");
+			            senha = sc.nextLine(); 
+			        }
+
+			        System.out.println("");
+			        System.out.println("SENHA CORRETA\n");
+
+			        while (true) {
+			            System.out.println("\nMenu Principal:");
+			            System.out.println("-----------------------------");
+			            System.out.println("(1) Cadastro de Cliente");
+			            System.out.println("(2) Compra de Carro");
+			            System.out.println("(3) Compra de Acessório");
+			            System.out.println("(4) Sair");
+			            System.out.println("-----------------------------");
+			            System.out.printf("Escolha uma opção: ");
+			            int opcao = sc.nextInt();
+			            sc.nextLine(); 
+
+			            switch (opcao) {
+
+			                case 1:
+			                    System.out.printf("Informe seu nome: ");
+			                    String nome = sc.nextLine();
+
+			                    System.out.printf("\nInforme seu Telefone: ");
+			                    String telefone = sc.nextLine(); 
+
+			                    System.out.printf("\nInforme seu Endereço: ");
+			                    String endereco = sc.nextLine();
+
+			                    System.out.println("Cliente cadastrado com sucesso!");
+			                    break;
+
+			                case 2:
+			                    System.out.println("Opções de carros:");
+			                    System.out.println("(1) - Carro Honda ");
+			                    System.out.println("(2) - Carro Ford");
+			                    System.out.println("(3) - Carro Fiat");
+			                    
+			                    System.out.print("Escolha um carro (1, 2, 3): ");
+			                    int escolhaCarro = sc.nextInt();
+			                    sc.nextLine(); 
+
+			                    System.out.println("Cores disponíveis: (1)Branco\n(2)Preto\n(3)Vermelho: ");
+			                    
+			                    int cor = sc.nextInt();
+			                    
+			                    	switch(cor) {
+			                    	case 1: 
+			                    		System.out.println("Branco selecionado!");
+			                    		break;
+			                    	case 2:
+			                    		System.out.println("Preto selecionado!");
+			                    		break;
+			                    	case 3:
+			                    		System.out.println("Vermelho selecionado!");
+			                    		break;
+			                    	}
+			                    sc.nextLine(); 
+			                    
+			                    
+			                    	
+
+			                    System.out.println("Informe a forma de pagamento:\n(1)Crédito\n(2)Débito");
+			                    int pag = sc.nextInt();
+			                    
+		                    	switch(pag) {
+		                    	case 1: 
+		                    		System.out.println("Crédito selecionado!");
+		                    		break;
+		                    	case 2:
+		                    		System.out.println("Débito selecionado");
+		                    		break;
+		                    	}
+		                    	sc.nextLine();
+
+		                    	System.out.println("-----------------------------");
+			                    System.out.println("Compra realizada com sucesso!");
+			                    break;
+
+			                case 3:
+			                    System.out.println("Qual o nome do acessório que deseja: ");
+			                    String ac = sc.nextLine();
+
+			                    System.out.println("Informe a quantidade: ");
+			                    int quantidade = sc.nextInt();
+			                    sc.nextLine(); 
+			                    
+			                    System.out.println("-----------------------------");
+			                    System.out.println("Acessório comprado com sucesso!");
+			                    break;
+
+			                case 4:
+			                    System.out.println("Finalizando compra, obrigado por comprar aqui!");
+			                    return;
+
+			                default:
+			                    System.out.println("Opção inválida. Tente novamente.");
+
+			            }
+			        }
+
+			    }
+	
+			}
+
